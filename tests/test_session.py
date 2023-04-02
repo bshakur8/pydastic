@@ -2,7 +2,7 @@ import pytest
 from elasticsearch import Elasticsearch
 from user import User
 
-from pydastic import ESModel, Session
+from pydastic import Session
 from pydastic.error import BulkError, InvalidModelError, NotFoundError
 
 

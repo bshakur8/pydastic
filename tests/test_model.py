@@ -34,7 +34,7 @@ def test_model_save_without_connection_raises_attribute_error():
 def test_model_save(es: Elasticsearch):
     user = User(name="John")
     user.save(wait_for=True)
-    assert user.id != None
+    assert user.id is not None
 
     res = es.get(index=user.Meta.index, id=user.id)
     assert res["found"]
